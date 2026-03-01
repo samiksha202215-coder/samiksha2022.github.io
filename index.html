@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Clouding | Enterprise Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; background-color: #ffffff; }
+
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            gap: 4rem;
+            animation: scrollMarquee 25s linear infinite;
+            width: max-content;
+        }
+
+        .hero-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/hexellence.png');
+            background-color: #ffffff;
+        }
+
+        .text-purple-brand { color: #6366f1; }
+        .bg-purple-brand { background-color: #6366f1; }
+
+        .form-card, .service-card {
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            border-color: #6366f1;
+            box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.15);
+        }
+
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            filter: blur(100px);
+            opacity: 0.1;
+            z-index: -1;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <nav class="fixed top-0 w-full z-[100] bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i data-lucide="cloud-lightning" class="w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter text-indigo-950">Internet<span class="text-indigo-600">Clouding</span></span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-10 font-semibold text-slate-600">
+                <a href="#services" class="hover:text-indigo-600 transition">Services</a>
+                <a href="#process" class="hover:text-indigo-600 transition">Process</a>
+                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+                <a href="tel:9915428793" class="bg-purple-brand text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-indigo-700 transition">
+                +91 99154 28793</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-pattern pt-48 pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h1 class="text-6xl lg:text-8xl font-extrabold leading-[1.1] mb-8">
+                    <span class="text-purple-brand">Modernize</span> Your Global Business
+                </h1>
+                <p class="text-xl text-slate-500 mb-12 max-w-xl leading-relaxed">
+                    Elevating brands through strategic design and cutting-edge technology. **Internet Clouding** builds digital products that drive real business growth.
+                </p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <button onclick="document.getElementById('contact').scrollIntoView()" class="bg-[#0f172a] text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-black transition shadow-xl">
+                        Start Your Project
+                    </button>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Expert Help</p>
+                            <p class="font-extrabold text-lg">9915428793</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative" data-aos="fade-left">
+                <div class="rounded-[3rem] overflow-hidden shadow-2xl bg-white p-2">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover rounded-[2.8rem]" alt="Laptop Interface">
+                </div>
+                <div class="absolute -bottom-10 left-0 bg-white p-6 rounded-3xl shadow-2xl border border-slate-50">
+                    <div class="w-14 h-14 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600 font-bold text-2xl">15+</div>
+                    <p class="text-xs font-bold mt-2 text-slate-400">YEARS EXP.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="py-12 bg-white border-y border-slate-100 overflow-hidden">
+        <div class="marquee-content">
+            <div class="flex items-center gap-4 px-4"><img src="https://flagcdn.com/us.svg" class="w-10 rounded shadow-sm"> <span class="font-bold text-slate-400 uppercase tracking-widest text-xs">USA</span></div>
+            <div class="flex items-center gap-4 px-4"><img src="https://flagcdn.com/in.svg" class="w-10 rounded shadow-sm"> <span class="font-bold text-slate-400 uppercase tracking-widest text-xs">India</span></div>
+            <div class="flex items-center gap-4 px-4"><img src="https://flagcdn.com/gb.svg" class="w-10 rounded shadow-sm"> <span class="font-bold text-slate-400 uppercase tracking-widest text-xs">UK</span></div>
+            <div class="flex items-center gap-4 px-4"><img src="https://flagcdn.com/ca.svg" class="w-10 rounded shadow-sm"> <span class="font-bold text-slate-400 uppercase tracking-widest text-xs">Canada</span></div>
+            <div class="flex items-center gap-4 px-4"><img src="https://flagcdn.com/au.svg" class="w-10 rounded shadow-sm"> <span class="font-bold text-slate-400 uppercase tracking-widest text-xs">Australia</span></div>
+            <div class="flex items-center gap-4 px-4"><img src="https://flagcdn.com/ae.svg" class="w-10 rounded shadow-sm"> <span class="font-bold text-slate-400 uppercase tracking-widest text-xs">UAE</span></div>
+        </div>
+    </div>
+
+    <section id="services" class="py-32 px-6 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8" data-aos="fade-up">
+                <div class="lg:w-2/3">
+                    <span class="text-indigo-600 font-bold uppercase tracking-[0.3em] text-sm">Our Expertise</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mt-4">High-Impact Solutions for Modern Enterprises</h2>
+                </div>
+                <p class="lg:w-1/3 text-slate-500 text-lg">We combine creative thinking with technical precision to deliver results that matter.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card p-10 rounded-[2.5rem]" data-aos="fade-up">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="code-2" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-[10px] font-bold bg-blue-100 text-blue-700 px-3 py-1 rounded-full uppercase tracking-wider">Engineering</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Enterprise Development</h3>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">Full-stack solutions using React, Node.js, and Python. We build scalable architectures designed to handle millions of users.</p>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> API Integrations</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Cloud Migration</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Progressive Web Apps</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="palette" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-[10px] font-bold bg-purple-100 text-purple-700 px-3 py-1 rounded-full uppercase tracking-wider">Creative</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Strategic UI/UX Design</h3>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">Design that converts. We use Figma and Adobe Suite to create high-fidelity prototypes and intuitive user journeys.</p>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Wireframing & Testing</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Design Systems</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Interaction Design</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="rocket" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full uppercase tracking-wider">Growth</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Digital Growth & SEO</h3>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">Dominating search results with data-driven SEO. We focus on technical SEO, content strategy, and link authority.</p>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Keyword Research</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> On-Page Optimization</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Performance Tracking</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-10 rounded-[2.5rem]" data-aos="fade-up">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-[10px] font-bold bg-orange-100 text-orange-700 px-3 py-1 rounded-full uppercase tracking-wider">Commerce</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">E-Commerce Mastery</h3>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">Specialized Shopify and Headless Commerce setups. We optimize for speed, checkout conversion, and mobile sales.</p>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Payment Security</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Inventory Automations</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Custom Checkout UX</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="fingerprint" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-[10px] font-bold bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full uppercase tracking-wider">Identity</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Brand Identity</h3>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">Developing unique brand voices and visual identities that resonate with your global target market.</p>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Logo & Guidelines</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Brand Messaging</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Social Media Kit</li>
+                    </ul>
+                </div>
+
+                <div class="service-card p-10 rounded-[2.5rem]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-16 h-16 bg-pink-50 text-pink-600 rounded-2xl flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <span class="text-[10px] font-bold bg-pink-100 text-pink-700 px-3 py-1 rounded-full uppercase tracking-wider">Support</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Managed Services</h3>
+                    <p class="text-slate-500 mb-6 text-sm leading-relaxed">24/7 technical support and maintenance. We ensure your digital assets are secure, updated, and fast.</p>
+                    <ul class="space-y-3 text-sm font-semibold text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Security Audits</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Weekly Backups</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i> Speed Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24" data-aos="fade-up">
+                <span class="text-indigo-600 font-bold uppercase tracking-[0.3em] text-sm">Our Method</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold mt-4">Transparent Working Process</h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8 relative">
+                <div class="relative p-8 rounded-3xl bg-slate-50 hover:bg-white border border-transparent hover:border-indigo-100 transition-all group" data-aos="fade-up">
+                    <div class="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold mb-6 text-xl">1</div>
+                    <h4 class="text-xl font-bold mb-3">Discovery</h4>
+                    <p class="text-slate-500 text-sm">We analyze your competitors, define KPIs, and document technical requirements.</p>
+                </div>
+
+                <div class="relative p-8 rounded-3xl bg-slate-50 hover:bg-white border border-transparent hover:border-indigo-100 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold mb-6 text-xl">2</div>
+                    <h4 class="text-xl font-bold mb-3">Strategic Design</h4>
+                    <p class="text-slate-500 text-sm">Mapping out user journeys and creating visual prototypes for your approval.</p>
+                </div>
+
+                <div class="relative p-8 rounded-3xl bg-slate-50 hover:bg-white border border-transparent hover:border-indigo-100 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold mb-6 text-xl">3</div>
+                    <h4 class="text-xl font-bold mb-3">Development</h4>
+                    <p class="text-slate-500 text-sm">Clean coding phase using the latest tech stack with weekly progress updates.</p>
+                </div>
+
+                <div class="relative p-8 rounded-3xl bg-slate-50 hover:bg-white border border-transparent hover:border-indigo-100 transition-all group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold mb-6 text-xl">4</div>
+                    <h4 class="text-xl font-bold mb-3">Testing & Launch</h4>
+                    <p class="text-slate-500 text-sm">Final bug testing, speed optimization, and secure deployment to production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="relative py-24 px-6 overflow-hidden bg-slate-900 text-white">
+        <div class="blob top-0 right-0"></div>
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2" data-aos="fade-right">
+                <span class="text-indigo-400 font-bold uppercase tracking-[0.3em] text-sm">Get in Touch</span>
+                <h2 class="text-5xl font-extrabold mt-4 mb-6 leading-tight">Ready to start your digital journey?</h2>
+                <p class="text-slate-400 text-lg mb-8">Our team is ready to transform your vision into a reality. Contact **Internet Clouding** for a free technical consultation.</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center"><i data-lucide="mail"></i></div>
+                    <p class="text-xl font-bold">hello@internetclouding.com</p>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 w-full" data-aos="zoom-in">
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl">
+                    <div class="mb-8 text-center">
+                        <h3 class="text-2xl font-bold text-slate-900">Project Inquiry</h3>
+                    </div>
+                    <div class="min-h-[400px]">
+                        <script src="https://sheetdb.io/s/f/px41eli8wuaxg.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white text-center">
+        <div class="max-w-7xl mx-auto px-6 border-t border-slate-100 pt-10">
+            <div class="flex items-center gap-3 justify-center mb-4">
+                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white shadow-md">
+                    <i data-lucide="cloud-lightning" class="w-5 h-5"></i>
+                </div>
+                <p class="font-extrabold text-slate-950 text-2xl tracking-tighter">Internet<span class="text-indigo-600">Clouding</span></p>
+            </div>
+            <p class="text-slate-400 text-sm">© 2026 Web Excellence | Global Enterprise Solutions.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        lucide.createIcons();
+    </script>
+</body>
+</html>
